@@ -1,0 +1,48 @@
+{
+	"name": "cru",
+	"scopeName": "source.cru",
+	"patterns": [
+		{ "include": "#constant" },
+		{ "include": "#comment" },
+		{ "include": "#linecomment" },
+		{ "include": "#operator" },
+		{ "include": "#keyword" },
+		{ "include": "#punctuation" },
+		{ "include": "#string" },
+		{ "include": "#entity" }],
+	  "repository": {
+		"entity": {
+		  "name": "variable",
+		  "match": "\\w[\\w0-9]*"
+		},
+		"constant": {
+		  "name": "constant.numeric",
+		  "match": "\\b(false|true|undefined)\\b|[+-]?(?:[0-9]+(?:\\.[0-9]+)?|\\.[0-9]+)(?:[eE][+-]?[0-9]+)?"
+		},
+		"operator": {
+		  "name": "keyword.operator",
+		  "match": "\\$"
+		},
+		"keyword": {
+		  "name": "keyword.control",
+		  "match": "\\b(let|in|where)\\b"
+		},
+		"punctuation": {
+			"name": "storage",
+			"match": "\\\\|\\.|->|:|#|,|="
+		},
+		"string": {
+		  "name": "string",
+		  "begin": "\"",
+		  "end": "\""
+		},
+		"linecomment": {
+		  "name": "comment",
+		  "begin": "\\/\\/",
+		  "end": "$"
+		},
+		"comment": {
+		  "name": "comment",
+		  "begin": "\\/\\*",
+		  "end": "\\*\\/"
+		} } }

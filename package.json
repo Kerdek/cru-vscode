@@ -1,0 +1,28 @@
+{
+    "name": "cru",
+    "displayName": "cru",
+    "description": "cru syntax for codium",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "directory": ".",
+        "url": "" },
+    "main": "cru_vscode.js",
+    "engines": {
+        "vscode": "^1.40.0" },
+    "categories": [
+        "Programming Languages" ],
+    "activationEvents": [ ],
+    "contributes": {
+        "languages": [{
+            "id": "cru",
+            "extensions": [".cru"],
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./lambda_purp.png",
+                "dark": "./lambda_purp.png"
+              } }],
+        "grammars": [{
+            "language": "cru",
+            "scopeName": "source.cru",
+            "path": "./cru.json" }] } }
